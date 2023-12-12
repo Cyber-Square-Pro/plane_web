@@ -41,7 +41,7 @@ export const CyclesHeader: FC = observer(() => {
             <Breadcrumbs.BreadcrumbItem
               type="text"
               icon={<ContrastIcon className="h-4 w-4 text-custom-text-300" />}
-              label="Cycles"
+              label="States"
             />
           </Breadcrumbs>
         </div>
@@ -53,7 +53,7 @@ export const CyclesHeader: FC = observer(() => {
           prependIcon={<Plus />}
           onClick={() => commandPaletteStore.toggleCreateCycleModal(true)}
         >
-          Add Cycle
+          Add State
         </Button>
       </div>
     </div>
