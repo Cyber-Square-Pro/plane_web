@@ -64,7 +64,13 @@ export const PeekOverviewProperties: FC<IPeekOverviewProperties> = observer((pro
     issueUpdate({ ...issue, estimate_point: _estimate });
   };
   const handleStartDate = (_startDate: string | null) => {
+    setToastAlert({
+      type: "success",
+      title: "Success",
+      message: "Start Date Added in Issue",
+    });
     issueUpdate({ ...issue, start_date: _startDate });
+
   };
   const handleTargetDate = (_targetDate: string | null) => {
     issueUpdate({ ...issue, target_date: _targetDate });
