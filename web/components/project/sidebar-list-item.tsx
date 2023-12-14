@@ -44,7 +44,7 @@ const navigation = (workspaceSlug: string, projectId: string) => [
     Icon: LayersIcon,
   },
   {
-    name: "Cycles",
+    name: "Sprints",
     href: `/${workspaceSlug}/projects/${projectId}/cycles`,
     Icon: ContrastIcon,
   },

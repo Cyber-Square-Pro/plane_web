@@ -1709,7 +1709,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\core":
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\core":
   version "0.0.1"
   resolved "file:packages/editor/core"
   dependencies:
@@ -1749,7 +1749,7 @@
     tiptap-markdown "^0.8.2"
     use-debounce "^9.0.4"
 
-"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\lite-text-editor":
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\lite-text-editor":
   version "0.0.1"
   resolved "file:packages/editor/lite-text-editor"
   dependencies:
@@ -1769,7 +1769,7 @@
     tiptap-markdown "^0.8.2"
     use-debounce "^9.0.4"
 
-"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\rich-text-editor":
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\rich-text-editor":
   version "0.0.1"
   resolved "file:packages/editor/rich-text-editor"
   dependencies:
@@ -1784,7 +1784,7 @@
     lowlight "^3.0.0"
     lucide-react "^0.244.0"
 
-"@plane/ui@*", "@plane/ui@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\ui":
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\ui":
   version "0.0.1"
   resolved "file:packages/ui"
   dependencies:
@@ -4314,7 +4314,7 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\eslint-config-custom":
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\eslint-config-custom":
   version "0.13.2"
   resolved "file:packages/eslint-config-custom"
   dependencies:
@@ -8012,7 +8012,7 @@ space-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
 
-"space@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\space":
+"space@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\space":
   version "0.13.2"
   resolved "file:space"
   dependencies:
@@ -8238,7 +8238,7 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\tailwind-config-custom":
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tailwind-config-custom":
   version "0.13.2"
   resolved "file:packages/tailwind-config-custom"
 
@@ -8465,7 +8465,7 @@ tsconfig-paths@^3.14.1, tsconfig-paths@^3.14.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tsconfig@*, "tsconfig@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\tsconfig":
+tsconfig@*, "tsconfig@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tsconfig":
   version "0.13.2"
   resolved "file:packages/tsconfig"
 
@@ -8883,7 +8883,7 @@ watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-"web@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\web":
+"web@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\web":
   version "0.13.2"
   resolved "file:web"
   dependencies:
