@@ -23,7 +23,7 @@ export const ProjectSettingsSidebar = () => {
       href: `/${workspaceSlug}/projects/${projectId}/settings/features`,
     },
     {
-      label: "States",
+      label: "Status",
       href: `/${workspaceSlug}/projects/${projectId}/settings/states`,
     },
     {
