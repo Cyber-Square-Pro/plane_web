@@ -192,7 +192,7 @@ export const PeekOverviewProperties: FC<IPeekOverviewProperties> = observer((pro
           <div className="flex items-center gap-2 w-full">
             <div className="flex items-center gap-2 w-40 text-sm flex-shrink-0">
               <DoubleCircleIcon className="h-4 w-4 flex-shrink-0" />
-              <p>State</p>
+              <p>Status</p>
             </div>
             <div>
               <SidebarStateSelect value={issue?.state || ""} onChange={handleState} disabled={disableUserActions} />

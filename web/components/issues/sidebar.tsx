@@ -346,7 +346,7 @@ export const IssueDetailsSidebar: React.FC<Props> = observer((props) => {
                 {(fieldsToShow.includes("all") || fieldsToShow.includes("assignee")) && (
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
-                      <UserGroupIcon className="h-4 w-4 flex-shrink-0" />
+                      {/* <UserGroupIcon className="h-4 w-4 flex-shrink-0" /> */}
                       <p>Assignees</p>
                     </div>
                     <div>
