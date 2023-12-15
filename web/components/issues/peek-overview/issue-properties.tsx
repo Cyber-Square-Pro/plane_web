@@ -25,6 +25,8 @@ type Props = {
   mode: TPeekOverviewModes;
   readOnly: boolean;
   workspaceSlug: string;
+
+  
 };
 
 export const PeekOverviewIssueProperties: FC<Props> = (props) => {
@@ -51,7 +53,16 @@ export const PeekOverviewIssueProperties: FC<Props> = (props) => {
         message: "Issue link copied to clipboard",
       });
     });
+    // setToastAlert({
+    //   type: "success",
+    //   title: "Success!",
+    //   message: "Project feature updated successfully.",
+    // });
   };
+  
+
+
+  
 
   return (
     <div className={mode === "full" ? "divide-y divide-custom-border-200" : ""}>
@@ -114,7 +125,7 @@ export const PeekOverviewIssueProperties: FC<Props> = (props) => {
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <CalendarDays className="h-3.5 w-3.5" />
-            <span className="flex-grow truncate">Start date</span>
+            <span className="flex-grow truncate" >Start date</span>
           </div>
           <div>
             <CustomDatePicker
@@ -123,7 +134,9 @@ export const PeekOverviewIssueProperties: FC<Props> = (props) => {
               onChange={(val) =>
                 handleUpdateIssue({
                   start_date: val,
+                  
                 })
+                
               }
               className="bg-custom-background-80 border-none"
               maxDate={maxDate ?? undefined}
@@ -144,6 +157,7 @@ export const PeekOverviewIssueProperties: FC<Props> = (props) => {
                 handleUpdateIssue({
                   target_date: val,
                 })
+                
               }
               className="bg-custom-background-80 border-none"
               minDate={minDate ?? undefined}
