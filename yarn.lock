@@ -1709,7 +1709,21 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\core":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\core":
+=======
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\editor\\core":
+=======
+<<<<<<< HEAD
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\editor\\core":
+=======
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\core":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"@plane/editor-core@*", "@plane/editor-core@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\editor\\core":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.0.1"
   resolved "file:packages/editor/core"
   dependencies:
@@ -1749,7 +1763,21 @@
     tiptap-markdown "^0.8.2"
     use-debounce "^9.0.4"
 
-"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\lite-text-editor":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\lite-text-editor":
+=======
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\editor\\lite-text-editor":
+=======
+<<<<<<< HEAD
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\editor\\lite-text-editor":
+=======
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\lite-text-editor":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"@plane/lite-text-editor@*", "@plane/lite-text-editor@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\editor\\lite-text-editor":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.0.1"
   resolved "file:packages/editor/lite-text-editor"
   dependencies:
@@ -1769,7 +1797,21 @@
     tiptap-markdown "^0.8.2"
     use-debounce "^9.0.4"
 
-"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\editor\\rich-text-editor":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\rich-text-editor":
+=======
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\editor\\rich-text-editor":
+=======
+<<<<<<< HEAD
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\editor\\rich-text-editor":
+=======
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\editor\\rich-text-editor":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"@plane/rich-text-editor@*", "@plane/rich-text-editor@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\editor\\rich-text-editor":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.0.1"
   resolved "file:packages/editor/rich-text-editor"
   dependencies:
@@ -1784,7 +1826,21 @@
     lowlight "^3.0.0"
     lucide-react "^0.244.0"
 
-"@plane/ui@*", "@plane/ui@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\ui":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\ui":
+=======
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\ui":
+=======
+<<<<<<< HEAD
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\ui":
+=======
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\ui":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"@plane/ui@*", "@plane/ui@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\ui":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.0.1"
   resolved "file:packages/ui"
   dependencies:
@@ -4314,7 +4370,21 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\eslint-config-custom":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\eslint-config-custom":
+=======
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\eslint-config-custom":
+=======
+<<<<<<< HEAD
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\eslint-config-custom":
+=======
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\eslint-config-custom":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+eslint-config-custom@*, "eslint-config-custom@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\eslint-config-custom":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.13.2"
   resolved "file:packages/eslint-config-custom"
   dependencies:
@@ -8012,7 +8082,21 @@ space-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-2.0.2.tgz"
   integrity sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==
 
-"space@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\space":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"space@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\space":
+=======
+"space@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\space":
+=======
+<<<<<<< HEAD
+"space@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\space":
+=======
+"space@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\space":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"space@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\space":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.13.2"
   resolved "file:space"
   dependencies:
@@ -8238,7 +8322,21 @@ table@^6.0.9:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
 
-tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\tailwind-config-custom":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tailwind-config-custom":
+=======
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\tailwind-config-custom":
+=======
+<<<<<<< HEAD
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\tailwind-config-custom":
+=======
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tailwind-config-custom":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+tailwind-config-custom@*, "tailwind-config-custom@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\tailwind-config-custom":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.13.2"
   resolved "file:packages/tailwind-config-custom"
 
@@ -8465,7 +8563,21 @@ tsconfig-paths@^3.14.1, tsconfig-paths@^3.14.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tsconfig@*, "tsconfig@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\packages\\tsconfig":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+tsconfig@*, "tsconfig@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tsconfig":
+=======
+tsconfig@*, "tsconfig@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\packages\\tsconfig":
+=======
+<<<<<<< HEAD
+tsconfig@*, "tsconfig@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\packages\\tsconfig":
+=======
+tsconfig@*, "tsconfig@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\packages\\tsconfig":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+tsconfig@*, "tsconfig@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\packages\\tsconfig":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.13.2"
   resolved "file:packages/tsconfig"
 
@@ -8883,7 +8995,21 @@ watchpack@^2.4.0:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-"web@file:C:\\Users\\Rifad\\Desktop\\Final Plane Project\\Front End\\plane\\web":
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+"web@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\web":
+=======
+"web@file:C:\\Users\\Dell\\Desktop\\plane-project\\frontend\\plane_web\\web":
+=======
+<<<<<<< HEAD
+"web@file:C:\\Users\\FINU FAIZ\\Desktop\\plane project\\frontend\\plane_web\\web":
+=======
+"web@file:C:\\Users\\HP\\Desktop\\plane project\\Frontend\\plane_web\\web":
+>>>>>>> adb089cc547f8342f5176a451350acafe8ee846c
+=======
+"web@file:C:\\Users\\user\\Desktop\\plane project\\frondend\\plane_web\\web":
+>>>>>>> a8cfe810dbe84de9826772e1678b6c3eb7aa2b9d
+>>>>>>> Stashed changes
   version "0.13.2"
   resolved "file:web"
   dependencies:

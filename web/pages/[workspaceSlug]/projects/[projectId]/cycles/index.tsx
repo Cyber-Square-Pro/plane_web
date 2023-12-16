@@ -86,12 +86,12 @@ const ProjectCyclesPage: NextPageWithLayout = observer(() => {
       {currentProjectDetails?.total_cycles === 0 ? (
         <div className="h-full grid place-items-center">
           <EmptyState
-            title="Plan your project with cycles"
-            description="Cycle is a custom time period in which a team works to complete items on their backlog."
+            title="Plan your project with states"
+            description="State is a custom time period in which a team works to complete items on their backlog."
             image={emptyCycle}
             primaryButton={{
               icon: <Plus className="h-4 w-4" />,
-              text: "New Cycle",
+              text: "New State",
               onClick: () => {
                 setCreateModal(true);
               },
