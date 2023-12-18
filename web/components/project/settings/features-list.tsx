@@ -16,8 +16,8 @@ type Props = {};
 
 const PROJECT_FEATURES_LIST = [
   {
-    title: "Cycles",
-    description: "Cycles are enabled for all the projects in this workspace. Access them from the sidebar.",
+    title: "Sprint",
+    description: "Sprint are enabled for all the projects in this workspace. Access them from the sidebar.",
     icon: <ContrastIcon className="h-4 w-4 text-purple-500 flex-shrink-0 rotate-180" />,
     property: "cycle_view",
   },
