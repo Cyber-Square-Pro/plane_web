@@ -60,7 +60,7 @@ export const CyclesBoard: FC<ICyclesBoard> = observer((props) => {
               className="text-custom-primary-100 text-sm outline-none"
               onClick={() => commandPaletteStore.toggleCreateCycleModal(true)}
             >
-              Create a new cycle
+              Create a new sprint
             </button>
           </div>
         </div>

@@ -36,7 +36,7 @@ export const CycleDeleteModal: React.FC<ICycleDelete> = observer((props) => {
         setToastAlert({
           type: "success",
           title: "Success!",
-          message: "Cycle deleted successfully.",
+          message: "Sprint deleted successfully.",
         });
         handleClose();
       } catch (error) {
@@ -90,13 +90,13 @@ export const CycleDeleteModal: React.FC<ICycleDelete> = observer((props) => {
                         <div className="flex-shrink-0 flex justify-center items-center rounded-full bg-red-500/20 w-12 h-12">
                           <AlertTriangle width={16} strokeWidth={2} className="text-red-600" />
                         </div>
-                        <div className="text-xl font-medium 2xl:text-2xl">Delete Cycle</div>
+                        <div className="text-xl font-medium 2xl:text-2xl">Delete Sprint</div>
                       </div>
                       <span>
                         <p className="text-sm text-custom-text-200">
-                          Are you sure you want to delete cycle{' "'}
+                          Are you sure you want to delete sprint{' "'}
                           <span className="break-words font-medium text-custom-text-100">{cycle?.name}</span>
-                          {'"'}? All of the data related to the cycle will be permanently removed. This action cannot be
+                          {'"'}? All of the data related to the sprint will be permanently removed. This action cannot be
                           undone.
                         </p>
                       </span>
@@ -106,7 +106,7 @@ export const CycleDeleteModal: React.FC<ICycleDelete> = observer((props) => {
                         </Button>
 
                         <Button variant="danger" size="sm" tabIndex={1} onClick={formSubmit}>
-                          {loader ? "Deleting..." : "Delete Cycle"}
+                          {loader ? "Deleting..." : "Delete Sprint"}
                         </Button>
                       </div>
                     </div>

@@ -37,14 +37,14 @@ export const CycleCreateUpdateModal: React.FC<CycleModalProps> = (props) => {
         setToastAlert({
           type: "success",
           title: "Success!",
-          message: "Cycle created successfully.",
+          message: "Sprint created successfully.",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
           title: "Error!",
-          message: "Error in creating cycle. Please try again.",
+          message: "Error in creating sprint. Please try again.",
         });
       });
 
@@ -55,14 +55,14 @@ export const CycleCreateUpdateModal: React.FC<CycleModalProps> = (props) => {
         setToastAlert({
           type: "success",
           title: "Success!",
-          message: "Cycle updated successfully.",
+          message: "Sprint updated successfully.",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
           title: "Error!",
-          message: "Error in updating cycle. Please try again.",
+          message: "Error in updating sprint. Please try again.",
         });
       });
 
@@ -107,7 +107,7 @@ export const CycleCreateUpdateModal: React.FC<CycleModalProps> = (props) => {
       setToastAlert({
         type: "error",
         title: "Error!",
-        message: "You already have a cycle on the given dates, if you want to create a draft cycle, remove the dates.",
+        message: "You already have a sprint on the given dates, if you want to create a draft sprint, remove the dates.",
       });
   };
 

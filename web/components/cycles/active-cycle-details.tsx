@@ -120,7 +120,7 @@ export const ActiveCycleDetails: React.FC<IActiveCycleDetails> = observer((props
             className="text-custom-primary-100 text-sm outline-none"
             onClick={() => commandPaletteStore.toggleCreateCycleModal(true)}
           >
-            Create a new cycle
+            Create a new sprint
           </button>
         </div>
       </div>
@@ -318,7 +318,7 @@ export const ActiveCycleDetails: React.FC<IActiveCycleDetails> = observer((props
 
               <Link href={`/${workspaceSlug}/projects/${projectId}/cycles/${cycle.id}`}>
                 <a className="bg-custom-primary text-white px-4 rounded-md py-2 text-center text-sm font-medium w-full hover:bg-custom-primary/90">
-                  View Cycle
+                  View Sprint
                 </a>
               </Link>
             </div>
@@ -415,7 +415,7 @@ export const ActiveCycleDetails: React.FC<IActiveCycleDetails> = observer((props
                   ))
                 ) : (
                   <div className="grid place-items-center text-custom-text-200 text-sm text-center">
-                    No issues present in the cycle.
+                    No issues present in the sprint.
                   </div>
                 )
               ) : (
