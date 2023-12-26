@@ -237,13 +237,13 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
                   <CustomMenu.MenuItem onClick={handleEditCycle}>
                     <span className="flex items-center justify-start gap-2">
                       <Pencil className="h-3 w-3" />
-                      <span>Edit cycle</span>
+                      <span>Edit sprint</span>
                     </span>
                   </CustomMenu.MenuItem>
                   <CustomMenu.MenuItem onClick={handleDeleteCycle}>
                     <span className="flex items-center justify-start gap-2">
                       <Trash2 className="h-3 w-3" />
-                      <span>Delete cycle</span>
+                      <span>Delete sprint</span>
                     </span>
                   </CustomMenu.MenuItem>
                 </>
@@ -251,7 +251,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
               <CustomMenu.MenuItem onClick={handleCopyText}>
                 <span className="flex items-center justify-start gap-2">
                   <LinkIcon className="h-3 w-3" />
-                  <span>Copy cycle link</span>
+                  <span>Copy sprint link</span>
                 </span>
               </CustomMenu.MenuItem>
             </CustomMenu>
