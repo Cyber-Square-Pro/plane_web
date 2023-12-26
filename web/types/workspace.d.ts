@@ -37,6 +37,9 @@ export interface IWorkspaceMemberInvitation {
   workspace: IWorkspace;
 }
 
+export interface IWorkspaceSingleInviteFormData {
+   email: string; role: number ;
+}
 export interface IWorkspaceBulkInviteFormData {
   emails: { email: string; role: TUserWorkspaceRole }[];
 }

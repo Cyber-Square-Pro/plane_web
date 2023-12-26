@@ -16,27 +16,34 @@ import { Button } from "@plane/ui";
 import { Search } from "lucide-react";
 // types
 import { NextPageWithLayout } from "types/app";
-import { IWorkspaceBulkInviteFormData } from "types";
+import { IWorkspaceBulkInviteFormData, IWorkspaceSingleInviteFormData } from "types";
 
 const WorkspaceMembersSettingsPage: NextPageWithLayout = observer(() => {
   const router = useRouter();
   const { workspaceSlug } = router.query;
+  console.log('qury', workspaceSlug )
   // store
   const {
     workspaceMember: { inviteMembersToWorkspace },
   } = useMobxStore();
   // states
-  const [inviteModal, setInviteModal] = useState(false);
+    const [inviteModal, setInviteModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
   // hooks
   const { setToastAlert } = useToast();
 
-  const handleWorkspaceInvite = (data: IWorkspaceBulkInviteFormData) => {
+  const handleWorkspaceInvite = (data:IWorkspaceSingleInviteFormData) => {
     if (!workspaceSlug) return;
 
+    console.log(data,'--------------------------------')
     return inviteMembersToWorkspace(workspaceSlug.toString(), data)
-      .then(async () => {
+      .then(async (response) => {
+
+        console.log(response.error,'000000000000');
+        
         setInviteModal(false);
+        console.log('clicked');
+        
         setToastAlert({
           type: "success",
           title: "Success!",
@@ -44,11 +51,14 @@ const WorkspaceMembersSettingsPage: NextPageWithLayout = observer(() => {
         });
       })
       .catch((err) =>
+      {
+        console.log(err,'ioio')
         setToastAlert({
           type: "error",
           title: "Error!",
           message: `${err.error ?? "Something went wrong. Please try again."}`,
         })
+      }
       );
   };
 

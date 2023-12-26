@@ -207,7 +207,7 @@ export const SignInView = observer(() => {
           <div className="grid place-items-center h-full overflow-y-auto py-5 px-7">
             <div>
               <h1 className="text-center text-2xl sm:text-2.5xl font-semibold text-custom-text-100">
-                Sign in to Plane
+                Sign in to Plane  App
               </h1>
 
               {/* <EmailCodeForm handleSignIn={handleEmailCodeSignIn} /> */}
