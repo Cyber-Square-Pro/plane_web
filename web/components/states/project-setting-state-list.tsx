@@ -46,9 +46,8 @@ export const ProjectSettingStateList: React.FC = observer(() => {
         isOpen={!!selectDeleteState}
         onClose={() => setSelectDeleteState(null)}
         data={projectStates?.find((s) => s.id === selectDeleteState) ?? null}
-      />
-
-      <div className="space-y-8 py-6">
+      /> 
+      {/* <div className="space-y-8 py-6">
         {orderedStateGroups ? (
           <>
             {Object.keys(orderedStateGroups).map((group) => (
@@ -111,7 +110,7 @@ export const ProjectSettingStateList: React.FC = observer(() => {
             <Loader.Item height="40px" />
           </Loader>
         )}
-      </div>
+      </div> */}
 
       {/* <div className="space-y-8 py-6">
         {states && currentProjectDetails && orderedStateGroups ? (

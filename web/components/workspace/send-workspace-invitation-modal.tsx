@@ -6,33 +6,47 @@ import { Button, CustomSelect, Input } from "@plane/ui";
 // icons
 import { Plus, X } from "lucide-react";
 // types
-import { IWorkspaceBulkInviteFormData, TUserWorkspaceRole } from "types";
+import { IWorkspaceBulkInviteFormData, TUserWorkspaceRole, IWorkspaceSingleInviteFormData } from "types";
 // constants
 import { ROLE } from "constants/workspace";
+import { log } from "console";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: IWorkspaceBulkInviteFormData) => Promise<void> | undefined;
+  onSubmit: (data: IWorkspaceSingleInviteFormData) => Promise<void> | undefined;
 };
+
+
 
 type EmailRole = {
   email: string;
   role: TUserWorkspaceRole;
 };
 
+// type FormValues = {
+//   emails: EmailRole[];
+// };
+
 type FormValues = {
-  emails: EmailRole[];
+  email: EmailRole;
 };
 
+// const defaultValues: FormValues = {
+//   emails: [
+//     {
+//       email: "",
+//       role: 15,
+//     },
+//   ],
+// };
+
 const defaultValues: FormValues = {
-  emails: [
-    {
-      email: "",
-      role: 15,
-    },
-  ],
-};
+  email: {
+    email: "",
+    role: 15,
+  }
+}
 
 export const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
   const { isOpen, onClose, onSubmit } = props;
@@ -43,22 +57,32 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
     reset,
     handleSubmit,
     formState: { isSubmitting, errors },
-  } = useForm<FormValues>();
+  } = useForm<IWorkspaceSingleInviteFormData>({defaultValues: {
+    email: '',
+    role: 15,
+  },});
 
-  const { fields, append, remove } = useFieldArray({
-    control,
-    name: "emails",
-  });
+  // const { fields, append, remove } = useFieldArray({
+  //   control,
+  //   name: "emails",
+  // });
+
+
 
   const handleClose = () => {
     onClose();
 
     const timeout = setTimeout(() => {
-      reset(defaultValues);
+      // reset(defaultValues);
       clearTimeout(timeout);
     }, 350);
   };
 
+
+  // const handleSendInvitation = async () => {
+  //   console.log('clicked');
+
+  // }
   // const onSubmit = async (formData: FormValues) => {
   //   if (!workspaceSlug) return;
 
@@ -84,12 +108,12 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
   // };
 
   const appendField = () => {
-    append({ email: "", role: 15 });
+    // append({ email: "", role: 15 });
   };
 
-  useEffect(() => {
-    if (fields.length === 0) append([{ email: "", role: 15 }]);
-  }, [fields, append]);
+  // useEffect(() => {
+  //   if (fields.length === 0) append([{ email: "", role: 15 }]);
+  // }, [fields, append]);
 
   return (
     <Transition.Root show={isOpen} as={React.Fragment}>
@@ -125,101 +149,71 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
                   }}
                 >
                   <div className="space-y-5">
-                    <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-custom-text-100">
-                      Invite people to collaborate
-                    </Dialog.Title>
-                    <div className="mt-2">
-                      <p className="text-sm text-custom-text-200">Invite members to work on your workspace.</p>
-                    </div>
-
-                    <div className="space-y-4 mb-3">
-                      {fields.map((field, index) => (
-                        <div key={field.id} className="group relative grid grid-cols-11 gap-4">
-                          <div className="col-span-7">
-                            <Controller
-                              control={control}
-                              name={`emails.${index}.email`}
-                              rules={{
-                                required: "Email ID is required",
-                                pattern: {
-                                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                  message: "Invalid Email ID",
-                                },
-                              }}
-                              render={({ field: { value, onChange, ref } }) => (
-                                <>
-                                  <Input
-                                    id={`emails.${index}.email`}
-                                    name={`emails.${index}.email`}
-                                    type="text"
-                                    value={value}
-                                    onChange={onChange}
-                                    ref={ref}
-                                    hasError={Boolean(errors.emails?.[index]?.email)}
-                                    placeholder="Enter their email..."
-                                    className="text-xs sm:text-sm w-full"
-                                  />
-                                  {errors.emails?.[index]?.email && (
-                                    <span className="ml-1 text-red-500 text-xs">
-                                      {errors.emails?.[index]?.email?.message}
-                                    </span>
-                                  )}
-                                </>
+                    {/* ... (rest of the code) ... */}
+                    <div className="group relative grid grid-cols-11 gap-4">
+                      <div className="col-span-7">
+                        <Controller
+                          control={control}
+                          name="email"
+                          rules={{
+                            required: "Email ID is required",
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: "Invalid Email ID",
+                            },
+                          }}
+                          render={({ field: { value, onChange } }) => (
+                            <>
+                              <Input
+                                type="text"
+                                value={value}
+                                onChange={onChange}
+                                placeholder="Enter their email..."
+                                className="text-xs sm:text-sm w-full"
+                              />
+                              {errors.email && (
+                                <span className="ml-1 text-red-500 text-xs">{errors.email.message}</span>
                               )}
-                            />
-                          </div>
-                          <div className="col-span-3">
-                            <Controller
-                              control={control}
-                              name={`emails.${index}.role`}
-                              rules={{ required: true }}
-                              render={({ field: { value, onChange } }) => (
-                                <CustomSelect
-                                  value={value}
-                                  label={<span className="text-xs sm:text-sm">{ROLE[value]}</span>}
-                                  onChange={onChange}
-                                  width="w-full"
-                                  input
-                                >
-                                  {Object.entries(ROLE).map(([key, value]) => (
-                                    <CustomSelect.Option key={key} value={parseInt(key)}>
-                                      {value}
-                                    </CustomSelect.Option>
-                                  ))}
-                                </CustomSelect>
-                              )}
-                            />
-                          </div>
-                          {fields.length > 1 && (
-                            <button
-                              type="button"
-                              className="self-center place-items-center rounded -ml-3"
-                              onClick={() => remove(index)}
-                            >
-                              <X className="h-3.5 w-3.5 text-custom-text-200" />
-                            </button>
+                            </>
                           )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                        />
+                      </div>
+                      <div className="col-span-3">
+                        <Controller
+                          control={control}
+                          name="role"
+                          rules={{ required: true }}
+                          render={({ field: { value, onChange } }) => (
+                             
+                            <CustomSelect
+                              value={value}
+                              label={<span className="text-xs sm:text-sm">{ROLE[value as keyof typeof ROLE]}</span>}
 
-                  <div className="mt-5 flex items-center justify-between gap-2">
-                    <button
-                      type="button"
-                      className="flex items-center gap-2 outline-custom-primary bg-transparent text-custom-primary text-sm font-medium py-2 pr-3"
-                      onClick={appendField}
-                    >
-                      <Plus className="h-4 w-4" />
-                      Add more
-                    </button>
-                    <div className="flex items-center gap-2">
-                      <Button variant="neutral-primary" size="sm" onClick={handleClose}>
-                        Cancel
-                      </Button>
-                      <Button variant="primary" size="sm" type="submit" loading={isSubmitting}>
-                        {isSubmitting ? "Sending Invitation..." : "Send Invitation"}
-                      </Button>
+                              onChange={onChange}
+                              width="w-full"
+                              input
+                            >
+                              {Object.entries(ROLE).map(([key, text]) => (
+                                <CustomSelect.Option key={key} value={parseInt(key)}>
+                                  {text}
+                                </CustomSelect.Option>
+                              ))}
+                            </CustomSelect>
+
+                          )}
+                        />
+                      </div>
+                    </div>
+                     
+                    <div className="mt-5 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <Button variant="neutral-primary" size="sm" onClick={handleClose}>
+                          Cancel
+                        </Button>
+                        <Button variant="primary" size="sm" type="submit" loading={isSubmitting}>
+                          {isSubmitting ? "Sending Invitation..." : "Send Invitation"}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </form>

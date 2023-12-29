@@ -14,6 +14,7 @@ import {
   IProductUpdateResponse,
   IUser,
   IWorkspaceBulkInviteFormData,
+  IWorkspaceSingleInviteFormData,
   IWorkspaceViewProps,
 } from "types";
 import { IWorkspaceView } from "types/workspace-views";
@@ -80,9 +81,16 @@ export class WorkspaceService extends APIService {
       });
   }
 
+  // async inviteWorkspace(
+  //     workspaceSlug: string,
+  //     data:IWorkspaceSingleInviteFormData,
+  //     user: IUser | undefined
+  //   ){
+  //     console.log('data is ', data)
+  //   }
   async inviteWorkspace(
     workspaceSlug: string,
-    data: IWorkspaceBulkInviteFormData,
+    data: IWorkspaceSingleInviteFormData,
     user: IUser | undefined
   ): Promise<any> {
     return this.post(`/api/workspaces/${workspaceSlug}/invite/`, data)
@@ -94,6 +102,11 @@ export class WorkspaceService extends APIService {
         throw error?.response?.data;
       });
   }
+
+  // inviteWorkspace(){
+  //   console.log('clicked..................');
+    
+  // }
 
   async joinWorkspace(workspaceSlug: string, invitationId: string, data: any, user: IUser | undefined): Promise<any> {
     return this.post(`/api/users/me/invitations/workspaces/${workspaceSlug}/${invitationId}/join/`, data, {

@@ -77,6 +77,7 @@ export const IssueDetailsSidebar: React.FC<Props> = observer((props) => {
 
   const [deleteIssueModal, setDeleteIssueModal] = useState(false);
   const [linkModal, setLinkModal] = useState(false);
+ 
   const [selectedLinkToUpdate, setSelectedLinkToUpdate] = useState<linkDetails | null>(null);
 
   const { user: userStore } = useMobxStore();

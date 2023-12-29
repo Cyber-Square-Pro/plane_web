@@ -1,7 +1,7 @@
 import { action, computed, observable, makeObservable, runInAction } from "mobx";
 import { RootStore } from "../root";
 // types
-import { IUser, IWorkspaceMember, IWorkspaceMemberInvitation, IWorkspaceBulkInviteFormData } from "types";
+import { IUser, IWorkspaceMember, IWorkspaceMemberInvitation, IWorkspaceBulkInviteFormData, IWorkspaceSingleInviteFormData} from "types";
 // services
 import { WorkspaceService } from "services/workspace.service";
 
@@ -18,7 +18,7 @@ export interface IWorkspaceMemberStore {
   fetchWorkspaceMemberInvitations: (workspaceSlug: string) => Promise<IWorkspaceMemberInvitation[]>;
   updateMember: (workspaceSlug: string, memberId: string, data: Partial<IWorkspaceMember>) => Promise<void>;
   removeMember: (workspaceSlug: string, memberId: string) => Promise<void>;
-  inviteMembersToWorkspace: (workspaceSlug: string, data: IWorkspaceBulkInviteFormData) => Promise<any>;
+  inviteMembersToWorkspace: (workspaceSlug: string, data: IWorkspaceSingleInviteFormData) => Promise<any>;
   deleteWorkspaceInvitation: (workspaceSlug: string, memberId: string) => Promise<void>;
   // computed
   workspaceMembers: IWorkspaceMember[] | null;
@@ -173,7 +173,7 @@ export class WorkspaceMemberStore implements IWorkspaceMemberStore {
    * @param workspaceSlug
    * @param data
    */
-  inviteMembersToWorkspace = async (workspaceSlug: string, data: IWorkspaceBulkInviteFormData) => {
+  inviteMembersToWorkspace = async (workspaceSlug: string, data: IWorkspaceSingleInviteFormData) => {
     try {
       await this.workspaceService.inviteWorkspace(workspaceSlug, data, this.rootStore.user.currentUser as IUser);
       await this.fetchWorkspaceMemberInvitations(workspaceSlug);
