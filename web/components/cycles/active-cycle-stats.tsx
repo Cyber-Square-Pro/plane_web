@@ -127,7 +127,7 @@ export const ActiveCycleProgressStats: React.FC<Props> = ({ cycle }) => {
         </Tab.Panels>
       ) : (
         <div className="grid place-items-center text-custom-text-200 text-sm text-center mt-4">
-          No issues present in the cycle.
+          No issues present in the sprint.
         </div>
       )}
     </Tab.Group>

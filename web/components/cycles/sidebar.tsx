@@ -84,7 +84,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Cycle link copied to clipboard",
+          title: "Sprint link copied to clipboard",
         });
       })
       .catch(() => {
@@ -124,7 +124,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
         setToastAlert({
           type: "error",
           title: "Error!",
-          message: "Unable to create cycle in past date. Please enter a valid date.",
+          message: "Unable to create sprint in past date. Please enter a valid date.",
         });
         return;
       }
@@ -144,7 +144,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
           setToastAlert({
             type: "success",
             title: "Success!",
-            message: "Cycle updated successfully.",
+            message: "Sprint updated successfully.",
           });
           return;
         } else {
@@ -152,7 +152,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
             type: "error",
             title: "Error!",
             message:
-              "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+              "You have a sprint already on the given dates, if you want to create your draft sprint you can do that by removing dates",
           });
           return;
         }
@@ -171,14 +171,14 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
         setToastAlert({
           type: "success",
           title: "Success!",
-          message: "Cycle updated successfully.",
+          message: "Sprint updated successfully.",
         });
       } else {
         setToastAlert({
           type: "error",
           title: "Error!",
           message:
-            "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+            "You have a sprint already on the given dates, if you want to create your draft sprint you can do that by removing dates",
         });
       }
     }
@@ -198,7 +198,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
         setToastAlert({
           type: "error",
           title: "Error!",
-          message: "Unable to create cycle in past date. Please enter a valid date.",
+          message: "Unable to create sprint in past date. Please enter a valid date.",
         });
         return;
       }
@@ -218,7 +218,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
           setToastAlert({
             type: "success",
             title: "Success!",
-            message: "Cycle updated successfully.",
+            message: "Sprint updated successfully.",
           });
           return;
         } else {
@@ -226,7 +226,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
             type: "error",
             title: "Error!",
             message:
-              "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+              "You have a sprint already on the given dates, if you want to create your draft sprint you can do that by removing dates",
           });
           return;
         }
@@ -245,14 +245,14 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
         setToastAlert({
           type: "success",
           title: "Success!",
-          message: "Cycle updated successfully.",
+          message: "Sprint updated successfully.",
         });
       } else {
         setToastAlert({
           type: "error",
           title: "Error!",
           message:
-            "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+            "You have a sprint already on the given dates, if you want to create your draft sprint you can do that by removing dates",
         });
       }
     }
@@ -321,7 +321,7 @@ export const CycleDetailsSidebar: React.FC<Props> = observer((props) => {
                   <CustomMenu.MenuItem onClick={() => setCycleDeleteModal(true)}>
                     <span className="flex items-center justify-start gap-2">
                       <Trash2 className="h-3 w-3" />
-                      <span>Delete cycle</span>
+                      <span>Delete sprint</span>
                     </span>
                   </CustomMenu.MenuItem>
                 </CustomMenu>

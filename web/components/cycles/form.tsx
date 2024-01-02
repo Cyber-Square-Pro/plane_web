@@ -58,7 +58,7 @@ export const CycleForm: React.FC<Props> = (props) => {
               />
             )}
           />
-          <h3 className="text-xl font-medium leading-6 text-custom-text-200">{status ? "Update" : "New"} Cycle</h3>
+          <h3 className="text-xl font-medium leading-6 text-custom-text-200">{status ? "Update" : "New"} Sprint</h3>
         </div>
         <div className="space-y-3">
           <div className="mt-2 space-y-3">
@@ -78,7 +78,7 @@ export const CycleForm: React.FC<Props> = (props) => {
                     id="cycle_name"
                     name="name"
                     type="text"
-                    placeholder="Cycle Title"
+                    placeholder="Sprint Title"
                     className="resize-none w-full placeholder:text-sm placeholder:font-medium focus:border-blue-400"
                     value={value}
                     inputSize="md"
@@ -143,10 +143,10 @@ export const CycleForm: React.FC<Props> = (props) => {
           {data
             ? isSubmitting
               ? "Updating Cycle..."
-              : "Update Cycle"
+              : "Update Sprint"
             : isSubmitting
             ? "Creating Cycle..."
-            : "Create Cycle"}
+            : "Create Sprint"}
         </Button>
       </div>
     </form>

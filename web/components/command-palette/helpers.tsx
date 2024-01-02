@@ -27,7 +27,7 @@ export const commandGroups: {
     ),
     path: (cycle: IWorkspaceDefaultSearchResult) =>
       `/${cycle?.workspace__slug}/projects/${cycle?.project_id}/cycles/${cycle?.id}`,
-    title: "Cycles",
+    title: "Sprints",
   },
   issue: {
     icon: <LayersIcon className="h-3 w-3" />,

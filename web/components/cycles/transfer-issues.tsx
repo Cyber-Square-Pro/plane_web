@@ -40,7 +40,7 @@ export const TransferIssues: React.FC<Props> = (props) => {
     <div className="-mt-2 mb-4 flex items-center justify-between px-4 pt-6">
       <div className="flex items-center gap-2 text-sm text-custom-text-200">
         <AlertCircle className="h-3.5 w-3.5 text-custom-text-200" />
-        <span>Completed cycles are not editable.</span>
+        <span>Completed sprint are not editable.</span>
       </div>
 
       {transferableIssuesCount > 0 && (
