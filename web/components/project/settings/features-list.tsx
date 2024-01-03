@@ -16,17 +16,17 @@ type Props = {};
 
 const PROJECT_FEATURES_LIST = [
   {
-    title: "Cycles",
-    description: "Cycles are enabled for all the projects in this workspace. Access them from the sidebar.",
+    title: "Sprints",
+    description: "Sprints are enabled for all the projects in this workspace. Access them from the sidebar.",
     icon: <ContrastIcon className="h-4 w-4 text-purple-500 flex-shrink-0 rotate-180" />,
     property: "cycle_view",
   },
-  {
-    title: "Modules",
-    description: "Modules are enabled for all the projects in this workspace. Access it from the sidebar.",
-    icon: <DiceIcon width={16} height={16} className="flex-shrink-0" />,
-    property: "module_view",
-  },
+  // {
+  //   title: "Modules",
+  //   description: "Modules are enabled for all the projects in this workspace. Access it from the sidebar.",
+  //   icon: <DiceIcon width={16} height={16} className="flex-shrink-0" />,
+  //   property: "module_view",
+  // },
   {
     title: "Views",
     description: "Views are enabled for all the projects in this workspace. Access it from the sidebar.",

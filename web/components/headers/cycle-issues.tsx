@@ -135,7 +135,7 @@ export const CycleIssuesHeader: React.FC = observer(() => {
             <Breadcrumbs.BreadcrumbItem
               type="text"
               icon={<ContrastIcon className="h-4 w-4 text-custom-text-300" />}
-              label="Cycles"
+              label="Sprints"
               link={`/${workspaceSlug}/projects/${projectId}/cycles`}
             />
             <Breadcrumbs.BreadcrumbItem

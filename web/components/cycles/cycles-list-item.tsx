@@ -78,7 +78,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "success",
         title: "Link Copied!",
-        message: "Cycle link copied to clipboard.",
+        message: "Sprint link copied to clipboard.",
       });
     });
   };
@@ -91,7 +91,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "error",
         title: "Error!",
-        message: "Couldn't add the cycle to favorites. Please try again.",
+        message: "Couldn't add the sprint to favorites. Please try again.",
       });
     });
   };
@@ -104,7 +104,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "error",
         title: "Error!",
-        message: "Couldn't add the cycle to favorites. Please try again.",
+        message: "Couldn't add the sprint to favorites. Please try again.",
       });
     });
   };
@@ -237,13 +237,13 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
                   <CustomMenu.MenuItem onClick={handleEditCycle}>
                     <span className="flex items-center justify-start gap-2">
                       <Pencil className="h-3 w-3" />
-                      <span>Edit cycle</span>
+                      <span>Edit sprint</span>
                     </span>
                   </CustomMenu.MenuItem>
                   <CustomMenu.MenuItem onClick={handleDeleteCycle}>
                     <span className="flex items-center justify-start gap-2">
                       <Trash2 className="h-3 w-3" />
-                      <span>Delete cycle</span>
+                      <span>Delete sprint</span>
                     </span>
                   </CustomMenu.MenuItem>
                 </>
@@ -251,7 +251,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
               <CustomMenu.MenuItem onClick={handleCopyText}>
                 <span className="flex items-center justify-start gap-2">
                   <LinkIcon className="h-3 w-3" />
-                  <span>Copy cycle link</span>
+                  <span>Copy sprint link</span>
                 </span>
               </CustomMenu.MenuItem>
             </CustomMenu>
