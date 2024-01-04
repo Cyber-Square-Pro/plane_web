@@ -46,7 +46,7 @@ export const ModulesListHeader: React.FC = observer(() => {
             <Breadcrumbs.BreadcrumbItem
               type="text"
               icon={<DiceIcon className="h-4 w-4 text-custom-text-300" />}
-              label="Modules"
+              label="Modules  kkkk"
             />
           </Breadcrumbs>
         </div>

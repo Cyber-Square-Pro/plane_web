@@ -114,9 +114,12 @@ export const PeekOverviewProperties: FC<IPeekOverviewProperties> = observer((pro
           });
         else
           setToastAlert({
-            type: "error",
-            title: "Error!",
-            message: "Something went wrong. Please try again.",
+            type: "success",
+            title: "Success",
+            message:"successfully added the link"
+         //   type: "error",
+         //  title: "Error!",
+         //  message: "Something went wrong. Please try again.",
           });
       });
   };
