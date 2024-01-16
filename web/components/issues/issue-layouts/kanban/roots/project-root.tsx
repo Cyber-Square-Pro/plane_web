@@ -29,7 +29,7 @@ export const KanBanLayout: React.FC = observer(() => {
     issueKanBanView: issueKanBanViewStore,
     issueDetail: issueDetailStore,
   } = useMobxStore();
-  const { currentProjectDetails } = projectStore;
+  // const { currentProjectDetails } = projectStore;
 
   const issues = issueStore?.getIssues;
 
@@ -95,10 +95,10 @@ export const KanBanLayout: React.FC = observer(() => {
   const labels = projectStore?.projectLabels || null;
   const stateGroups = ISSUE_STATE_GROUPS || null;
   const projects = workspaceSlug ? projectStore?.projects?.[workspaceSlug] || null : null;
-  const estimates =
-    currentProjectDetails?.estimate !== null
-      ? projectStore.projectEstimates?.find((e) => e.id === currentProjectDetails?.estimate) || null
-      : null;
+  // const estimates =
+  //   currentProjectDetails?.estimate !== null
+  //     ? projectStore.projectEstimates?.find((e) => e.id === currentProjectDetails?.estimate) || null
+  //     : null;
 
   return (
     <>

@@ -14,7 +14,7 @@ const Icon = ({ color }: any) => (
 );
 
 export const LabelHeader: FC<ILabelHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   const label = column_value ?? null;
 

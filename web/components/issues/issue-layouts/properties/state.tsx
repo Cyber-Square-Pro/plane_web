@@ -29,7 +29,7 @@ export interface IIssuePropertyState {
 
 export const IssuePropertyState: React.FC<IIssuePropertyState> = observer((props) => {
   const {
-    view,
+    // view,
     projectId,
     value,
     onChange,

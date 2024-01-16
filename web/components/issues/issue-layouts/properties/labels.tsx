@@ -30,7 +30,7 @@ export interface IIssuePropertyLabels {
 
 export const IssuePropertyLabels: React.FC<IIssuePropertyLabels> = observer((props) => {
   const {
-    view,
+    // view,
     projectId,
     value,
     onChange,

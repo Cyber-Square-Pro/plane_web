@@ -9,7 +9,7 @@ export interface IEmptyHeader {
 }
 
 export const EmptyHeader: React.FC<IEmptyHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   return <HeaderGroupByCard title={column_value?.title || "All Issues"} count={issues_count} issuePayload={{}} />;
 });

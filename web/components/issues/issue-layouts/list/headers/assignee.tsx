@@ -14,7 +14,7 @@ export interface IAssigneesHeader {
 export const Icon = ({ user }: any) => <Avatar name={user.display_name} src={user.avatar} size="md" />;
 
 export const AssigneesHeader: FC<IAssigneesHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const {  column_value, issues_count } = props;
 
   const assignee = column_value ?? null;
 

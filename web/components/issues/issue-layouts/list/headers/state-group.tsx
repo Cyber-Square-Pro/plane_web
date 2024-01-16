@@ -20,7 +20,7 @@ export const Icon = ({ stateGroup, color }: { stateGroup: any; color?: any }) =>
 );
 
 export const StateGroupHeader: FC<IStateGroupHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   const stateGroup = column_value ?? null;
 

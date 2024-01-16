@@ -5,7 +5,6 @@
   "private": true,
   "workspaces": [
     "web",
-    "space",
     "packages/editor/*",
     "packages/eslint-config-custom",
     "packages/tailwind-config-custom",

@@ -37,7 +37,7 @@ const Icon = ({ priority }: any) => (
 );
 
 export const PriorityHeader: FC<IPriorityHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   const priority = column_value ?? null;
 

@@ -9,14 +9,14 @@ import { useMobxStore } from "lib/mobx/store-provider";
 import { AuthService } from "services/auth.service";
 // components
 import {
-  GoogleLoginButton,
-  GithubLoginButton,
-  EmailCodeForm,
+  // GoogleLoginButton,
+  // GithubLoginButton,
+  // EmailCodeForm,
   EmailPasswordForm,
   EmailPasswordFormValues,
 } from "components/account";
 // ui
-import { Loader, Spinner } from "@plane/ui";
+import { Spinner } from "@plane/ui";
 // images
 import BluePlaneLogoWithoutText from "public/plane-logos/blue-without-text.png";
 // types
@@ -25,15 +25,11 @@ import { IUser, IUserSettings } from "types";
 const authService = new AuthService();
 
 export const SignInView = observer(() => {
-  console.log('loading.....');
-  
   const {
     user: { fetchCurrentUser, fetchCurrentUserSettings },
-    appConfig: { envConfig },
+    // appConfig: { envConfig },
   } = useMobxStore();
 
-  console.log(envConfig,'00000000000');
-  
   // router
   const router = useRouter();
   const { next: next_url } = router.query as { next: string };
@@ -42,7 +38,7 @@ export const SignInView = observer(() => {
   // toast
   const { setToastAlert } = useToast();
   // computed
-  const enableEmailPassword = true
+  // const enableEmailPassword = true
     // envConfig &&
     // (envConfig?.email_password_login ||
     //   !(
@@ -51,29 +47,24 @@ export const SignInView = observer(() => {
     //     envConfig?.google_client_id ||
     //     envConfig?.github_client_id
     //   ));
-
   const handleLoginRedirection = useCallback(
     (user: IUser) => {
       console.log('user', user);
-      
       // if the user is not onboarded, redirect them to the onboarding page
       if (!user.is_onboarded) {
         router.push("/onboarding");
         return;
       }
-      console.log('next url', next_url);
-      
+      console.log('next url', next_url)
       // if next_url is provided, redirect the user to that url
       if (next_url) {
         router.push(next_url);
         return;
       }
-
       // if the user is onboarded, fetch their last workspace details
       fetchCurrentUserSettings()
         .then((userSettings: IUserSettings) => {
           console.log('success');
-          
           const workspaceSlug =
             userSettings?.workspace?.last_workspace_slug || userSettings?.workspace?.fallback_workspace_slug;
           if (workspaceSlug) router.push(`/${workspaceSlug}`);
@@ -94,64 +85,63 @@ export const SignInView = observer(() => {
       handleLoginRedirection(user);
     });
   }, [fetchCurrentUser, handleLoginRedirection]);
-
   useEffect(() => {
     mutateUserInfo();
   }, [mutateUserInfo]);
 
-  const handleGoogleSignIn = async ({ clientId, credential }: any) => {
-    try {
-      setLoading(true);
-      if (clientId && credential) {
-        const socialAuthPayload = {
-          medium: "google",
-          credential,
-          clientId,
-        };
-        const response = await authService.socialAuth(socialAuthPayload);
-        if (response) {
-          mutateUserInfo();
-        }
-      } else {
-        setLoading(false);
-        throw Error("Cant find credentials");
-      }
-    } catch (err: any) {
-      setLoading(false);
-      setToastAlert({
-        title: "Error signing in!",
-        type: "error",
-        message: err?.error || "Something went wrong. Please try again later or contact the support team.",
-      });
-    }
-  };
+  // const handleGoogleSignIn = async ({ clientId, credential }: any) => {
+  //   try {
+  //     setLoading(true);
+  //     if (clientId && credential) {
+  //       const socialAuthPayload = {
+  //         medium: "google",
+  //         credential,
+  //         clientId,
+  //       };
+  //       const response = await authService.socialAuth(socialAuthPayload);
+  //       if (response) {
+  //         mutateUserInfo();
+  //       }
+  //     } else {
+  //       setLoading(false);
+  //       throw Error("Cant find credentials");
+  //     }
+  //   } catch (err: any) {
+  //     setLoading(false);
+  //     setToastAlert({
+  //       title: "Error signing in!",
+  //       type: "error",
+  //       message: err?.error || "Something went wrong. Please try again later or contact the support team.",
+  //     });
+  //   }
+  // };
 
-  const handleGitHubSignIn = async (credential: string) => {
-    try {
-      setLoading(true);
-      if (envConfig && envConfig.github_client_id && credential) {
-        const socialAuthPayload = {
-          medium: "github",
-          credential,
-          clientId: envConfig.github_client_id,
-        };
-        const response = await authService.socialAuth(socialAuthPayload);
-        if (response) {
-          mutateUserInfo();
-        }
-      } else {
-        setLoading(false);
-        throw Error("Cant find credentials");
-      }
-    } catch (err: any) {
-      setLoading(false);
-      setToastAlert({
-        title: "Error signing in!",
-        type: "error",
-        message: err?.error || "Something went wrong. Please try again later or contact the support team.",
-      });
-    }
-  };
+  // const handleGitHubSignIn = async (credential: string) => {
+  //   try {
+  //     setLoading(true);
+  //     if (envConfig && envConfig.github_client_id && credential) {
+  //       const socialAuthPayload = {
+  //         medium: "github",
+  //         credential,
+  //         clientId: envConfig.github_client_id,
+  //       };
+  //       const response = await authService.socialAuth(socialAuthPayload);
+  //       if (response) {
+  //         mutateUserInfo();
+  //       }
+  //     } else {
+  //       setLoading(false);
+  //       throw Error("Cant find credentials");
+  //     }
+  //   } catch (err: any) {
+  //     setLoading(false);
+  //     setToastAlert({
+  //       title: "Error signing in!",
+  //       type: "error",
+  //       message: err?.error || "Something went wrong. Please try again later or contact the support team.",
+  //     });
+  //   }
+  // };
 
   const handlePasswordSignIn = (formData: EmailPasswordFormValues) => {
     setLoading(true);
@@ -170,21 +160,21 @@ export const SignInView = observer(() => {
       });
   };
 
-  const handleEmailCodeSignIn = async (response: any) => {
-    try {
-      setLoading(true);
-      if (response) {
-        mutateUserInfo();
-      }
-    } catch (err: any) {
-      setLoading(false);
-      setToastAlert({
-        type: "error",
-        title: "Error!",
-        message: err?.error || "Something went wrong. Please try again later or contact the support team.",
-      });
-    }
-  };
+  // const handleEmailCodeSignIn = async (response: any) => {
+  //   try {
+  //     setLoading(true);
+  //     if (response) {
+  //       mutateUserInfo();
+  //     }
+  //   } catch (err: any) {
+  //     setLoading(false);
+  //     setToastAlert({
+  //       type: "error",
+  //       title: "Error!",
+  //       message: err?.error || "Something went wrong. Please try again later or contact the support team.",
+  //     });
+  //   }
+  // };
 
   return (
     <>

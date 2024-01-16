@@ -11,7 +11,7 @@ export interface ICreatedByHeader {
 }
 
 export const CreatedByHeader: FC<ICreatedByHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   const createdBy = column_value ?? null;
 

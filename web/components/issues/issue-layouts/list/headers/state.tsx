@@ -11,7 +11,7 @@ export interface IStateHeader {
 }
 
 export const StateHeader: FC<IStateHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const {column_value, issues_count } = props;
 
   const state = column_value ?? null;
 

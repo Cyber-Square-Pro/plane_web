@@ -1,67 +1,65 @@
 import React from "react";
-import { DragDropContext } from "@hello-pangea/dnd";
+// import { DragDropContext } from "@hello-pangea/dnd";
 import { observer } from "mobx-react-lite";
 // components
-import { KanBanSwimLanes } from "../swimlanes";
-import { KanBan } from "../default";
+// import { KanBanSwimLanes } from "../swimlanes";
+// import { KanBan } from "../default";
 // store
-import { useMobxStore } from "lib/mobx/store-provider";
-import { RootStore } from "store/root";
-// constants
-import { ISSUE_STATE_GROUPS, ISSUE_PRIORITIES } from "constants/issue";
+// import { useMobxStore } from "lib/mobx/store-provider";
+// import { RootStore } from "store/root";
+// // constants
+// import { ISSUE_STATE_GROUPS, ISSUE_PRIORITIES } from "constants/issue";
 
 export interface IViewKanBanLayout {}
 
-export const ProjectViewKanBanLayout: React.FC = observer(() => {
-  const {
-    project: projectStore,
-    projectMember: { projectMembers },
-    projectState: projectStateStore,
-    issue: issueStore,
-    issueFilter: issueFilterStore,
-    issueKanBanView: issueKanBanViewStore,
-  }: RootStore = useMobxStore();
+export const ProjectViewKanBanLayout: React.FC = observer(() =>
+  // const {
+  //   project: projectStore,
+  //   // projectMember: { projectMembers },
+  //   projectState: projectStateStore,
+  //   issue: issueStore,
+  //   issueFilter: issueFilterStore,
+  //   issueKanBanView: issueKanBanViewStore,
+  // }: RootStore = useMobxStore();
 
-  const issues = issueStore?.getIssues;
+    // const issues = issueStore?.getIssues;
 
-  const sub_group_by: string | null = issueFilterStore?.userDisplayFilters?.sub_group_by || null;
+    // const sub_group_by: string | null = issueFilterStore?.userDisplayFilters?.sub_group_by || null;
 
-  const group_by: string | null = issueFilterStore?.userDisplayFilters?.group_by || null;
+    // const group_by: string | null = issueFilterStore?.userDisplayFilters?.group_by || null;
 
-  const display_properties = issueFilterStore?.userDisplayProperties || null;
+    // const display_properties = issueFilterStore?.userDisplayProperties || null;
 
-  const currentKanBanView: "swimlanes" | "default" = issueFilterStore?.userDisplayFilters?.sub_group_by
-    ? "swimlanes"
-    : "default";
+  // const currentKanBanView: "swimlanes" | "default" = issueFilterStore?.userDisplayFilters?.sub_group_by
+  //   ? "swimlanes"
+  //   : "default";
 
-  const onDragEnd = (result: any) => {
-    if (!result) return;
+  // const onDragEnd = (result: any) => {
+  //   if (!result) return;
 
-    if (
-      result.destination &&
-      result.source &&
-      result.destination.droppableId === result.source.droppableId &&
-      result.destination.index === result.source.index
-    )
-      return;
+  //   if (
+  //     result.destination &&
+  //     result.source &&
+  //     result.destination.droppableId === result.source.droppableId &&
+  //     result.destination.index === result.source.index
+  //   )
+  //     return;
 
-    currentKanBanView === "default"
-      ? issueKanBanViewStore?.handleDragDrop(result.source, result.destination)
-      : issueKanBanViewStore?.handleSwimlaneDragDrop(result.source, result.destination);
-  };
+  //   currentKanBanView === "default"
+  //     ? issueKanBanViewStore?.handleDragDrop(result.source, result.destination)
+  //     : issueKanBanViewStore?.handleSwimlaneDragDrop(result.source, result.destination);
+  // // };
+  // const updateIssue = (sub_group_by: string | null, group_by: string | null, issue: any) => {
+  //   issueStore.updateIssueStructure(group_by, sub_group_by, issue);
+  // };
+  // const states = projectStateStore?.projectStates || null;
+  // const priorities = ISSUE_PRIORITIES || null;
+  // const labels = projectStore?.projectLabels || null;
+  // const stateGroups = ISSUE_STATE_GROUPS || null;
+  // const projects = projectStateStore?.projectStates || null;
+  // const estimates = null;
 
-  const updateIssue = (sub_group_by: string | null, group_by: string | null, issue: any) => {
-    issueStore.updateIssueStructure(group_by, sub_group_by, issue);
-  };
-
-  const states = projectStateStore?.projectStates || null;
-  const priorities = ISSUE_PRIORITIES || null;
-  const labels = projectStore?.projectLabels || null;
-  const stateGroups = ISSUE_STATE_GROUPS || null;
-  const projects = projectStateStore?.projectStates || null;
-  const estimates = null;
-
-  return null;
+   null
 
   // return (
   //   <div className={`relative min-w-full w-max min-h-full h-max bg-custom-background-90 px-3`}>
@@ -104,4 +102,4 @@ export const ProjectViewKanBanLayout: React.FC = observer(() => {
   //     </DragDropContext>
   //   </div>
   // );
-});
+);

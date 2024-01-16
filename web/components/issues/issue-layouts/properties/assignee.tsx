@@ -26,8 +26,8 @@ export interface IIssuePropertyAssignee {
 
 export const IssuePropertyAssignee: React.FC<IIssuePropertyAssignee> = observer((props) => {
   const {
-    view,
-    projectId,
+    // view,
+    // projectId,
     value,
     onChange,
     disabled = false,
@@ -42,7 +42,7 @@ export const IssuePropertyAssignee: React.FC<IIssuePropertyAssignee> = observer(
   // store
   const {
     workspace: workspaceStore,
-    project: projectStore,
+    // project: projectStore,
     workspaceMember: { workspaceMembers, fetchWorkspaceMembers },
   } = useMobxStore();
   const workspaceSlug = workspaceStore?.workspaceSlug;

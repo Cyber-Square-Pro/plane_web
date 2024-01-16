@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { observer } from "mobx-react-lite";
 // components
 import { SpreadsheetColumnsList, SpreadsheetIssuesColumn, SpreadsheetInlineCreateIssueForm } from "components/issues";
@@ -34,7 +34,7 @@ export const SpreadsheetView: React.FC<Props> = observer((props) => {
     states,
     handleIssueAction,
     handleUpdateIssue,
-    openIssuesListModal,
+    // openIssuesListModal,
     disableUserActions,
     enableQuickCreateIssue,
   } = props;
@@ -46,17 +46,14 @@ export const SpreadsheetView: React.FC<Props> = observer((props) => {
     issueId: string;
   } | null>(null);
 
-  const [isInlineCreateIssueFormOpen, setIsInlineCreateIssueFormOpen] = useState(false);
+  // const [isInlineCreateIssueFormOpen, setIsInlineCreateIssueFormOpen] = useState(false);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const router = useRouter();
-  const { cycleId, moduleId } = router.query;
-
-  const type = cycleId ? "cycle" : moduleId ? "module" : "issue";
-
+  // const router = useRouter();
+//  const type = cycleId ? "cycle" : moduleId ? "module" : "issue";
   const handleScroll = () => {
     if (!containerRef.current) return;
 

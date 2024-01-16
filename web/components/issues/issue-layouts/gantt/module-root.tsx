@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite";
 import { useMobxStore } from "lib/mobx/store-provider";
 import useProjectDetails from "hooks/use-project-details";
 // components
-import { IssueGanttBlock, IssueGanttSidebarBlock } from "components/issues";
+import { IssueGanttBlock } from "components/issues";
 import {
   GanttChartRoot,
   IBlockUpdateData,

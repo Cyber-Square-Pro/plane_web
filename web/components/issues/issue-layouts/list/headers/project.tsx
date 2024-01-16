@@ -14,7 +14,7 @@ export interface IProjectHeader {
 const Icon = ({ emoji }: any) => <div className="w-6 h-6">{renderEmoji(emoji)}</div>;
 
 export const ProjectHeader: FC<IProjectHeader> = observer((props) => {
-  const { column_id, column_value, issues_count } = props;
+  const { column_value, issues_count } = props;
 
   const project = column_value ?? null;
 
