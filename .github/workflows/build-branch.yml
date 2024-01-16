@@ -25,12 +25,6 @@ jobs:
         with:
           node-version: "21"
 
-      - name: Set environment variables
-        run: |
-          echo "NEXT_PUBLIC_API_BASE_URL=${{ secrets.DEVELOPMENT_API_URL }}" >> $GITHUB_ENV
-          echo "ANOTHER_SECRET=${{ secrets.ANOTHER_SECRET }}" >> $GITHUB_ENV
-          grep -q "^NEXT_PUBLIC_API_BASE_URL=" .env && sed -i "s/^NEXT_PUBLIC_API_BASE_URL=.*/NEXT_PUBLIC_API_BASE_URL=${{ secrets.DEVELOPMENT_API_URL }}/" .env || echo "NEXT_PUBLIC_API_BASE_URL=${{ secrets.DEVELOPMENT_API_URL }}" >> .env
-
       - name: Installing dependencies
         run: npm install --legacy-peer-deps
 
@@ -45,7 +39,8 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
-            cd /plane-ui/plane-web-staging/plane_web
+            echo "NEXT_PUBLIC_API_BASE_URL=${{ secrets.DEVELOPMENT_API_URL }}" > /plane-ui/plane-dev/plane_web/.env
+            cd /plane-ui/plane-dev/plane_web
             nvm use 21
             npm install --legacy-peer-deps
             npm run build
