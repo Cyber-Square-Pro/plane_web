@@ -17,6 +17,7 @@ import {
 import { Spinner } from "@plane/ui";
 
 export const ProjectLayoutRoot: React.FC = observer(() => {
+  
   const router = useRouter();
   const { workspaceSlug, projectId } = router.query;
 
