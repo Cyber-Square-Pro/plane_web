@@ -127,6 +127,7 @@ export class RootStore {
   projectPublish: IProjectPublishStore;
   project: IProjectStore;
   projectState: IProjectStateStore;
+  // projectStatus: IProjectStateStore;
   projectLabel: IProjectLabelStore;
   projectEstimates: IProjectEstimateStore;
   projectMember: IProjectMemberStore;

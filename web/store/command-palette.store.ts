@@ -16,6 +16,7 @@ export interface ICommandPaletteStore {
   isCreateIssueModalOpen: boolean;
   isDeleteIssueModalOpen: boolean;
   isBulkDeleteIssueModalOpen: boolean;
+  isCreateStateModalOpen:boolean;
 
   toggleCommandPaletteModal: (value?: boolean) => void;
   toggleShortcutModal: (value?: boolean) => void;
@@ -27,6 +28,7 @@ export interface ICommandPaletteStore {
   toggleCreateModuleModal: (value?: boolean) => void;
   toggleDeleteIssueModal: (value?: boolean) => void;
   toggleBulkDeleteIssueModal: (value?: boolean) => void;
+  toggleCreateStateModal: (value?: boolean) => void;
 }
 
 class CommandPaletteStore implements ICommandPaletteStore {
@@ -40,6 +42,7 @@ class CommandPaletteStore implements ICommandPaletteStore {
   isCreateIssueModalOpen: boolean = false;
   isDeleteIssueModalOpen: boolean = false;
   isBulkDeleteIssueModalOpen: boolean = false;
+  isCreateStateModalOpen:boolean =false;
   // root store
   rootStore;
   // service
@@ -59,6 +62,7 @@ class CommandPaletteStore implements ICommandPaletteStore {
       isCreateIssueModalOpen: observable.ref,
       isDeleteIssueModalOpen: observable.ref,
       isBulkDeleteIssueModalOpen: observable.ref,
+      isCreateStateModalOpen:observable.ref,
       // computed
       // projectPages: computed,
       // action
@@ -72,12 +76,21 @@ class CommandPaletteStore implements ICommandPaletteStore {
       toggleCreateModuleModal: action,
       toggleDeleteIssueModal: action,
       toggleBulkDeleteIssueModal: action,
+      toggleCreateStateModal: action,
     });
 
     this.rootStore = _rootStore;
     this.projectService = new ProjectService();
     this.pageService = new PageService();
   }
+  toggleCreateStateModal = (value?: boolean) => {
+    if (value) {
+      this.isCommandPaletteOpen = value;
+    } else {
+      this.isCommandPaletteOpen = !this.isCommandPaletteOpen;
+    }
+  };
+
 
   toggleCommandPaletteModal = (value?: boolean) => {
     if (value) {

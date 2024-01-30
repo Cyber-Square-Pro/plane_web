@@ -2,6 +2,7 @@ import { FC, ReactNode } from "react";
 // components
 import { ProjectSettingsSidebar } from "./sidebar";
 
+
 export interface IProjectSettingLayout {
   children: ReactNode;
 }
