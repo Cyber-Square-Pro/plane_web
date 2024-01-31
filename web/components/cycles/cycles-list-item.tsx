@@ -78,7 +78,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "success",
         title: "Link Copied!",
-        message: "Sprint link copied to clipboard.",
+        message: "Cycle link copied to clipboard.",
       });
     });
   };
@@ -91,7 +91,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "error",
         title: "Error!",
-        message: "Couldn't add the sprint to favorites. Please try again.",
+        message: "Couldn't add the cycle to favorites. Please try again.",
       });
     });
   };
@@ -104,7 +104,7 @@ export const CyclesListItem: FC<TCyclesListItem> = (props) => {
       setToastAlert({
         type: "error",
         title: "Error!",
-        message: "Couldn't add the sprint to favorites. Please try again.",
+        message: "Couldn't add the cycle to favorites. Please try again.",
       });
     });
   };

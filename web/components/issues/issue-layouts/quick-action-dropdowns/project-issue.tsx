@@ -108,7 +108,7 @@ export const ProjectIssueQuickActions: React.FC<Props> = (props) => {
         >
           <div className="flex items-center gap-2">
             <Trash2 className="h-3 w-3" />
-            Delete issue
+            Delete issue 
           </div>
         </CustomMenu.MenuItem>
       </CustomMenu>
