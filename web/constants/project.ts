@@ -15,14 +15,17 @@ export const NETWORK_CHOICES: { key: 0 | 2; label: string; icon: LucideIcon }[] 
 ];
 
 export const GROUP_CHOICES = {
-  backlog: "Backlog",
-  unstarted: "Unstarted",
-  started: "Started",
+  todo: "To Do",
+  in_progress: "In Progress",
+  ready_for_qa: "Ready For QA",
+  qa_passed: "QA Passed",
+  qa_failed: "QA Failed",
   completed: "Completed",
-  cancelled: "Cancelled",
+
+
 };
 
-export const STATE_GROUP = ["Backlog", "Unstarted", "Started", "Completed", "Cancelled"];
+export const STATE_GROUP = ["Backlog", "Unstarted", "Started", "Completed", "Cancelled", "open"];
 
 export const PRIORITIES: TIssuePriorities[] = ["urgent", "high", "medium", "low", "none"];
 

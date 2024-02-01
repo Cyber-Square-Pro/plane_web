@@ -1,6 +1,6 @@
 import { IProject, IProjectLite, IWorkspaceLite } from "types";
 
-export type TStateGroups = "backlog" | "unstarted" | "started" | "completed" | "cancelled";
+export type TStateGroups = "todo"|"in_progress"|"ready_for_qa"|"qa_passed"| "qa_failed"| "completed";
 
 export interface IState {
   readonly id: string;

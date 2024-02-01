@@ -26,13 +26,13 @@ type Props = {
   selectedGroup: StateGroup | null;
 };
 
-export type StateGroup = "backlog" | "unstarted" | "started" | "completed" | "cancelled" | null;
+export type StateGroup = "todo"|"in_progress"|"ready_for_qa"|"qa_passed"| "qa_failed"| "completed"| null;
 
 const defaultValues: Partial<IState> = {
   name: "",
   description: "",
   color: "rgb(var(--color-text-200))",
-  group: "backlog",
+  group: "todo",
 };
 
 export const CreateUpdateStateInline: React.FC<Props> = observer((props) => {
@@ -73,13 +73,13 @@ export const CreateUpdateStateInline: React.FC<Props> = observer((props) => {
     if (data) return;
     reset({
       ...defaultValues,
-      group: selectedGroup ?? "backlog",
+      group: selectedGroup ?? "todo",
     });
   }, [selectedGroup, data, reset]);
 
   const handleClose = () => {
     onClose();
-    reset({ name: "", color: "#000000", group: "backlog" });
+    reset({ name: "", color: "#000000", group: "todo" });
   };
 
   const handleCreate = async (formData: IState) => {

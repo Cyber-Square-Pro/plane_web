@@ -29,7 +29,7 @@ const defaultValues: Partial<IState> = {
   name: "",
   description: "",
   color: "rgb(var(--color-text-200))",
-  group: "backlog",
+  group: "todo",
 };
 
 export const CreateStateModal: React.FC<Props> = observer((props) => {

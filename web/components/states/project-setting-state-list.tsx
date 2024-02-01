@@ -5,7 +5,7 @@ import useSWR from "swr";
 import { observer } from "mobx-react-lite";
 import { useMobxStore } from "lib/mobx/store-provider";
 // components
-import { CreateStatusModal, CreateUpdateStateInline, DeleteStateModal, ProjectSettingListItem, StateGroup } from "components/states";
+import { CreateStateModal, CreateUpdateStateInline, DeleteStateModal, ProjectSettingListItem, StateGroup } from "components/states";
 // ui
 import { Loader } from "@plane/ui";
 // icons
@@ -50,25 +50,24 @@ export const ProjectSettingStateList: React.FC = observer(() => {
 
   return (
     <>
-<CreateStatusModal
+{/* <CreateStateModal
         isOpen={inviteModal}       
         handleClose={ ()=>{setInviteModal(false);}}
        
         projectId={"1"}  
-      />
+      /> */}
 
 <div className="flex items-center py-3.5 border-b border-custom-border-100">
       <h3 className="text-xl font-medium">States </h3>  
       
 
-    
-<button type="button" className="flex items-center gap-2 text-custom-primary-100 px-2 hover:text-custom-primary-200 outline-none"
+      {/* <button type="button" className="flex items-center gap-2 text-custom-primary-100 px-2 hover:text-custom-primary-200 outline-none"
                style={{paddingLeft: 800}}  onClick={() => setInviteModal(true)}
                   >
                     <Plus className="h-4 w-4" />
-                  </button>
-                  </div>
-    
+                  </button> */}
+                  </div> 
+     
 
       <DeleteStateModal
         isOpen={!!selectDeleteState}
@@ -91,7 +90,7 @@ export const ProjectSettingStateList: React.FC = observer(() => {
                     className="flex items-center gap-2 text-custom-primary-100 px-2 hover:text-custom-primary-200 outline-none"
                     onClick={() => setActiveGroup(group as keyof StateGroup)}
                   >
-                    {/* <Plus className="h-4 w-4" /> */}
+                    <Plus className="h-4 w-4" />
                   </button>
                 </div>
                 <div className="flex flex-col gap-2 rounded">
